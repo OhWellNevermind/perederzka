@@ -17,6 +17,8 @@ export default {
     },
     colors: {
       main: "#17BBDE",
+      white: "#fff",
+      black: "000",
     },
   },
   plugins: [],
