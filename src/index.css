@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type="radio"] {
+input[type="checkbox"] {
   /* Add if not using autoprefixer */
   -webkit-appearance: none;
   background-color: transparent;
@@ -15,7 +15,41 @@ input[type="radio"] {
   border-radius: 5px;
 }
 
-input[type="radio"]:checked {
+input[type="checkbox"]:checked {
   border: 2px solid #17bbde;
   background-color: #d7f0f5;
+}
+
+/* Faq styles */
+
+.faq-row-wrapper {
+  .faq-title {
+  }
+
+  .faq-body {
+    .faq-row {
+      .row-title {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        @apply font-semibold leading-[1.4] text-[16px];
+
+        .icon-wrapper {
+          max-width: none;
+          max-height: none;
+        }
+      }
+
+      .row-content {
+        height: fit-content;
+        font-size: 14px;
+        background-color: #e8f9fc;
+        border-top: 1px solid #17bbde;
+        border-radius: 0px 0px 5px 5px;
+        .row-content-text {
+          padding: 10px;
+        }
+      }
+    }
+  }
 }

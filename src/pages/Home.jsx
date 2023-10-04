@@ -1,94 +1,70 @@
-import { useState } from "react";
 import Container from "../components/Container/Container";
-import { DogIcon } from "../components/icons/DogIcon";
-import { CatIcon } from "../components/icons/CatIcon";
+import { IoIosArrowDown } from "react-icons/io";
+import Faq from "react-faq-component";
+import { Footer } from "../components/Footer/Footer";
+import { SearchForm } from "../components/Home/SearchForm/SearchForm";
 
 const Home = () => {
-  const [pet, setPet] = useState("");
-
   return (
-    <Container>
-      <h1 className="text-center text-[24px] font-semibold mt-[10px] pb-[30px] whitespace-pre-wrap">
-        <span className="pl-[20px]">Допоможемо вам</span>
-        <span className="text-main "> знайти ідеальне місце </span>
-        <span className="pl-[20px]">для ваших домашніх улюбленців</span>
-      </h1>
-      <form className="flex flex-col items-center pt-[20px] pb-[30px] rounded-[5px] border-4 border-[#EBEBEB] bg-[#F9F9F9]">
-        <h2 className=" px-[10px] text-[18px] mb-[20px] font-semibold text-center w-[277px]">
-          Тут ви зможете знайти в кого залишити домашню тварину у вашому місті
-        </h2>
-        <div className="w-full h-[2px] bg-[#D9D9D9]"></div>
-        <div className="self-start px-[10px] w-full">
-          <h3 className="self-start font-semibold text-[14px] mb-[10px] pt-[20px]">
-            Де будемо шукати?
-          </h3>
-          <select
-            className="w-full rounded-[5px] border-2 border-[#D9D9D9] bg-white mb-[20px]"
-            defaultValue=""
-          >
-            <option disabled value="">
-              Оберіть місто...
-            </option>
-          </select>
-          <h3 className="self-start font-semibold text-[14px] mb-[10px]">
-            Я хочу залишити:
-          </h3>
-          <div className="flex justify-between mb-[40px]">
-            <label className=" relative flex items-center justify-center">
-              <span className="absolute flex flex-col justify-center items-center">
-                <DogIcon />
-                Собаку
-              </span>
-
-              <input
-                onChange={(e) => {
-                  setPet(e.target.value);
-                }}
-                type="radio"
-                name="dog"
-                value="dog"
-                checked={pet === "dog"}
-              />
-            </label>
-            <label className=" relative flex items-center justify-center">
-              <span className="absolute flex flex-col justify-center items-center">
-                <CatIcon />
-                Кота
-              </span>
-              <input
-                onChange={(e) => {
-                  setPet(e.target.value);
-                }}
-                type="radio"
-                name="cat"
-                checked={pet === "cat"}
-                value="cat"
-              />
-            </label>
-            <label className="relative flex items-center justify-center">
-              <span className="absolute flex flex-col justify-center items-center">
-                Інше
-              </span>
-              <input
-                onChange={(e) => {
-                  setPet(e.target.value);
-                }}
-                checked={pet === "other"}
-                type="radio"
-                name="other"
-                value="other"
-              />
-            </label>
-          </div>
-        </div>
-        <button
-          type="submit"
-          className="w-fit bg-main rounded-[5px] p-[10px] text-white text-lg font-semibold"
-        >
-          Знайти варіанти
-        </button>
-      </form>
-    </Container>
+    <>
+      <Container>
+        <h1 className="text-center text-[24px] font-semibold mt-[10px] pb-[30px] whitespace-pre-wrap max-w-[300px]">
+          Допоможемо вам
+          <span className="text-main"> знайти ідеальне місце </span>
+          для ваших домашніх улюбленців
+        </h1>
+        <SearchForm />
+        <section id="faqs" className="pt-[40px] pb-[50px]">
+          <h2 className="font-semibold text-lg text-center mb-[20px]">
+            Поширені запитання
+          </h2>
+          <Faq
+            data={{
+              rows: [
+                {
+                  title:
+                    "Як визначити, що місце перетримки надійне і безпечне для тварини?",
+                  content:
+                    "Ми рекомендуємо звертати увагу на рейтинг та відгуки інших користувачів, які вже користувалися послугами передетримки нашого сайту. Також слід зв'язатися з тим, хто надає послугу перетримки, поставити всі необхідні питання та впевнитися, що умови відповідають потребам вашої тварини.",
+                },
+                {
+                  title: "Що робити, якщо з моєю твариною щось сталося?",
+                  content:
+                    "Памʼятайте, що наш сайт лише допомогає вам знайти тих, хто готовий взяти тварин на перетримку. Якщо з вашою твариною на перетримці щось сталося, сайт та його власники за це відповідальності не несуть. Ви можете відправити скаргу на профіль того, хто нашкодив вашій тварині, щоб ми могли видалити його обліковий запис з сайту.",
+                },
+                {
+                  title: "Як визначити ціну перетримки для моєї тварини?",
+                  content:
+                    "Зазвичай ціна перетримки за добу вказується у профілі догсітера, але щоб дізнатися більше ви можети звʼязатися з ним і обговорити всі умови перетримки, і спитати про вартість послуги. Ціна перетримки може відрізнятися в залежності від типу тварини, тривалості перетримки і умов. ",
+                },
+                {
+                  title:
+                    "Як я можу знати, що моя тварина буде оточена дбайливістю і увагою на місці перетримки?",
+                  content:
+                    "Ми рекомендуємо переглянути профілі і відгуки інших користувачів щодо місць перетримка, а також зустрітися з тим, хто надає послугу перетримки особисто, перед тим як довірити йому вашу тварину. Це допоможе вам впевнитися в якості умов і уваги, яку отримає ваш пухнастий друг.",
+                },
+                {
+                  title:
+                    "Як зв'язатися з власником місця перетримки для подальшої деталізації?",
+                  content:
+                    "На сторінці кожного оголошення мають бути вказані контакти(номер телефона, пошта), через які ви можете звʼязатися з людиною, яка надає послуги перетримки.",
+                },
+                {
+                  title: "Як стати догсітером?",
+                  content: `Щоб стати догсітером на нашому сайті, потрібно лише <span> зареєструватися як догсітер </span>, внести всі необхідні дані та опублікувати ваше оголошення.`,
+                },
+              ],
+            }}
+            config={{
+              arrowIcon: (
+                <IoIosArrowDown size={32} className="!fill-[#808080]" />
+              ),
+            }}
+          />
+        </section>
+      </Container>
+      <Footer />
+    </>
   );
 };
 

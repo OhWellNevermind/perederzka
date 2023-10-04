@@ -2,6 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    extend: {
+      backgroundImage: {
+        "footer-texture": "url('/src/images/Rectangle 18@2x.png')",
+      },
+    },
     screens: {
       sm: "640px",
       // => @media (min-width: 640px) { ... }
