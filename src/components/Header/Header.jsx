@@ -18,7 +18,7 @@ const Header = () => {
             <button
               onClick={() => {
                 setIsOpen(false);
-                window.document.documentElement.style.overflowY = "auto";
+                window.document.documentElement.style.overflow = "auto";
               }}
             >
               <IoCloseSharp size={24} fill="#17BBDE" stroke="#17BBDE" />

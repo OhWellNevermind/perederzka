@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 const BurgerMenu = ({ isOpen }) => {
   return (
     <div
-      className={`z-50 absolute transition-all ease-in-out duration-300 w-full h-full bg-white top-[56px] translate-x-full left-0 ${
-        isOpen ? "translate-x-0" : "translate-x-full hidden"
+      className={`z-50 fixed transition-all ease-in-out duration-300 w-full h-full bg-white top-[56px] translate-x-full left-0 ${
+        isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
       } `}
     >
       <div className="flex flex-col items-center h-full">
