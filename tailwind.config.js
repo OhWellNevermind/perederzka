@@ -22,6 +22,7 @@ export default {
     },
     colors: {
       main: "#17BBDE",
+      hover: "#55D6F1",
       white: "#fff",
       black: "000",
     },

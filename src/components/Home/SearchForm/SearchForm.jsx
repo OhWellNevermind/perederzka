@@ -52,8 +52,11 @@ export const SearchForm = () => {
         </div>
       </div>
       <button
+        onClick={(e) => {
+          e.preventDefault();
+        }}
         type="submit"
-        className="w-fit bg-main rounded-[5px] p-[10px] text-white text-lg font-semibold"
+        className="w-fit bg-main rounded-[5px] p-[10px] text-white text-lg font-semibold hover:bg-hover focus:bg-white focus:text-hover"
       >
         Знайти варіанти
       </button>

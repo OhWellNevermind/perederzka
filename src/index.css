@@ -28,26 +28,55 @@ input[type="checkbox"]:checked {
 
   .faq-body {
     .faq-row {
+      border-bottom: none;
       .row-title {
+        border-bottom: 1px solid #17bbde;
         padding: 10px;
         display: flex;
-        align-items: center;
+        justify-content: center;
         @apply font-semibold leading-[1.4] text-[16px];
 
+        .row-title-text {
+          width: 100%;
+          @media screen and (min-width: 540px) {
+            padding-left: 15px;
+            max-width: 500px;
+          }
+        }
+
         .icon-wrapper {
+          position: static;
           max-width: none;
           max-height: none;
         }
       }
-
       .row-content {
+        display: flex;
+        justify-content: center;
         height: fit-content;
-        font-size: 14px;
-        background-color: #e8f9fc;
-        border-top: 1px solid #17bbde;
+        font-size: 16px;
+        background-image: url(./images/pawshighres 1@2x.png),
+          linear-gradient(rgb(232, 249, 252), rgb(232, 249, 252));
+        background-position: left 20px top, left bottom;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 60px, contain;
+        border-bottom: none;
         border-radius: 0px 0px 5px 5px;
+        @media screen and (max-width: 767px) {
+          background-image: linear-gradient(
+            rgb(232, 249, 252),
+            rgb(232, 249, 252)
+          );
+          background-size: contain;
+          background-position: center;
+        }
         .row-content-text {
-          padding: 10px;
+          padding: 20px 10px;
+          height: fit-content;
+          max-width: 500px;
+          @media screen and (min-width: 540px) {
+            padding: 20px 0;
+          }
         }
       }
     }
