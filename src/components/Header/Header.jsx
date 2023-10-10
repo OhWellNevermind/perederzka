@@ -10,11 +10,14 @@ const Header = () => {
   return (
     <>
       <header className="flex justify-center bg-[#FBFBFB] border-b-2 border-b-[#D9D9D9] p-[10px] lg:mr-auto lg:ml-auto">
-        <div className="flex justify-between items-center lg:justify-normal lg:max-w-[1280px]">
-          <Link to="/" className="font-black text-2xl text-main mr-[134px]">
+        <div className="flex justify-between items-center w-full lg:justify-normal lg:max-w-[1280px]">
+          <Link
+            to="/"
+            className="font-black text-2xl lg:text-[32px] text-main mr-[134px]"
+          >
             LOGO
           </Link>
-          <div className="hidden lg:flex items-center  w-full">
+          <div className="hidden lg:flex items-center w-full justify-between">
             <div className="flex gap-[30px] mr-[134px]">
               <a
                 className="font-semibold text-[18px] text-black text-center hover:text-main transition-all ease-linear"
