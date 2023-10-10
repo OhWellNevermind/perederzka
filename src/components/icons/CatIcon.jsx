@@ -1,4 +1,6 @@
-export const CatIcon = () => {
+import PropTypes from "prop-types";
+
+export const CatIcon = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +8,7 @@ export const CatIcon = () => {
       height="40"
       viewBox="0 0 40 40"
       fill="none"
+      className={className}
     >
       <g clipPath="url(#clip0_39_107)">
         <path
@@ -59,4 +62,8 @@ export const CatIcon = () => {
       </defs>
     </svg>
   );
+};
+
+CatIcon.propTypes = {
+  className: PropTypes.string,
 };

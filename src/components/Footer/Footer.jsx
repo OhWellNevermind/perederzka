@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-footer-texture bg-cover px-[10px] pb-[50px] pt-[20px]">
+    <footer className="bg-footer-texture bg-no-repeat bg-cover px-[10px] pb-[50px] pt-[20px]">
       <Link to="/" className="font-black text-2xl text-white">
         LOGO
       </Link>

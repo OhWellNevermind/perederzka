@@ -8,10 +8,10 @@ export default {
       },
     },
     screens: {
-      sm: "640px",
+      sm: "320px",
       // => @media (min-width: 640px) { ... }
 
-      md: "768px",
+      md: "744px",
       // => @media (min-width: 768px) { ... }
 
       lg: "1440px",

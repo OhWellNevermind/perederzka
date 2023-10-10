@@ -13,20 +13,39 @@ input[type="checkbox"] {
   font: inherit;
   border: 1px solid #000000;
   border-radius: 5px;
+  @media screen and (min-width: 1440px) {
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border: 2px solid #d9d9d9;
+  }
 }
 
 input[type="checkbox"]:checked {
   border: 2px solid #17bbde;
   background-color: #d7f0f5;
+  @media screen and (min-width: 1440px) {
+    border: 2px solid #d9d9d9;
+    background-color: #17bbde;
+    background-image: url(/src/images/cheked.svg);
+    background-position: center;
+  }
 }
 
 /* Faq styles */
 
 .faq-row-wrapper {
+  @media screen and (min-width: 1440px) {
+    width: 800px;
+  }
   .faq-title {
   }
 
   .faq-body {
+    font-size: 16px;
+    @media screen and (min-width: 1440px) {
+      font-size: 18px;
+    }
     .faq-row {
       border-bottom: none;
       .row-title {
@@ -34,7 +53,8 @@ input[type="checkbox"]:checked {
         padding: 10px;
         display: flex;
         justify-content: center;
-        @apply font-semibold leading-[1.4] text-[16px];
+        font-weight: 600;
+        line-height: 1.4;
 
         .row-title-text {
           width: 100%;
@@ -54,23 +74,24 @@ input[type="checkbox"]:checked {
         display: flex;
         justify-content: center;
         height: fit-content;
-        font-size: 16px;
-        background-image: url(./images/pawshighres 1@2x.png),
-          linear-gradient(rgb(232, 249, 252), rgb(232, 249, 252));
-        background-position: left 20px top, left bottom;
-        background-repeat: no-repeat, no-repeat;
-        background-size: 60px, contain;
+        background-image: linear-gradient(
+          rgb(232, 249, 252),
+          rgb(232, 249, 252)
+        );
+        background-size: contain;
+        background-position: center;
+
         border-bottom: none;
-        border-radius: 0px 0px 5px 5px;
-        @media screen and (max-width: 767px) {
-          background-image: linear-gradient(
-            rgb(232, 249, 252),
-            rgb(232, 249, 252)
-          );
-          background-size: contain;
-          background-position: center;
+        @media screen and (min-width: 767px) {
+          background-image: url(/src/images/pawshighres1@2x.png),
+            linear-gradient(rgb(232, 249, 252), rgb(232, 249, 252));
+          background-position: left 20px top, left bottom;
+          background-repeat: no-repeat, no-repeat;
+          background-size: 60px, contain;
         }
+
         .row-content-text {
+          font-size: inherit;
           padding: 20px 10px;
           height: fit-content;
           max-width: 500px;

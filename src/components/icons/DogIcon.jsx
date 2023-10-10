@@ -1,4 +1,6 @@
-export const DogIcon = () => {
+import PropTypes from "prop-types";
+
+export const DogIcon = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +8,7 @@ export const DogIcon = () => {
       height="40"
       viewBox="0 0 40 40"
       fill="none"
+      className={className}
     >
       <path
         d="M16.6667 30V36.6667C16.6667 36.6667 16.6667 40 20 40C23.3334 40 23.3334 36.6667 23.3334 36.6667V30H16.6667Z"
@@ -61,4 +64,8 @@ export const DogIcon = () => {
       />
     </svg>
   );
+};
+
+DogIcon.propTypes = {
+  className: PropTypes.string,
 };

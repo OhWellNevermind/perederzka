@@ -9,31 +9,63 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-[#FBFBFB]  border-b-2 border-b-[#D9D9D9] p-[10px]">
-        <div className="flex justify-between">
-          <Link to="/" className="font-black text-2xl text-main">
+      <header className="flex justify-center bg-[#FBFBFB] border-b-2 border-b-[#D9D9D9] p-[10px] lg:mr-auto lg:ml-auto">
+        <div className="flex justify-between items-center lg:justify-normal lg:max-w-[1280px]">
+          <Link to="/" className="font-black text-2xl text-main mr-[134px]">
             LOGO
           </Link>
-          {isOpen ? (
-            <button
-              onClick={() => {
-                setIsOpen(false);
-                window.document.documentElement.style.overflow = "auto";
-              }}
-            >
-              <IoCloseSharp size={24} fill="#17BBDE" stroke="#17BBDE" />
-            </button>
-          ) : (
-            <button
-              onClick={() => {
-                setIsOpen(true);
-                window.document.documentElement.style.overflowY = "hidden";
-              }}
-              type="button"
-            >
-              <HiOutlineMenu size={24} fill="#17BBDE" stroke="#17BBDE" />
-            </button>
-          )}
+          <div className="hidden lg:flex items-center  w-full">
+            <div className="flex gap-[30px] mr-[134px]">
+              <a
+                className="font-semibold text-[18px] text-black text-center hover:text-main transition-all ease-linear"
+                href=""
+              >
+                Залишити тварину на перетримку
+              </a>
+              <a
+                className="font-semibold text-[18px] text-black text-center hover:text-main transition-all ease-linear"
+                href=""
+              >
+                Стати догсітером
+              </a>
+              <a
+                className="font-semibold text-[18px] text-black text-center hover:text-main transition-all ease-linear"
+                href=""
+              >
+                FAQs
+              </a>
+            </div>
+            <div className="mt-auto flex gap-[30px]">
+              <button className="font-semibold text-lg text-main">
+                Увійти
+              </button>
+              <button className="p-[10px] bg-main rounded-[5px] font-semibold text-lg text-white hover:bg-hover focus:bg-white focus:text-hover">
+                Зареєструватися
+              </button>
+            </div>
+          </div>
+          <div className="lg:hidden">
+            {isOpen ? (
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  window.document.documentElement.style.overflowY = "auto";
+                }}
+              >
+                <IoCloseSharp size={24} fill="#17BBDE" stroke="#17BBDE" />
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  setIsOpen(true);
+                  window.document.documentElement.style.overflowY = "hidden";
+                }}
+                type="button"
+              >
+                <HiOutlineMenu size={24} fill="#17BBDE" stroke="#17BBDE" />
+              </button>
+            )}
+          </div>
         </div>
       </header>
       <BurgerMenu isOpen={isOpen} />
