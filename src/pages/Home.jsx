@@ -3,6 +3,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import Faq from "react-faq-component";
 import { Footer } from "../components/Footer/Footer";
 import { SearchForm } from "../components/Home/SearchForm/SearchForm";
+import { Link } from "react-router-dom";
+import ReactDOMServer from "react-dom/server";
 
 const Home = () => {
   return (
@@ -55,7 +57,18 @@ const Home = () => {
                   },
                   {
                     title: "Як стати догсітером?",
-                    content: `Щоб стати догсітером на нашому сайті, потрібно лише <a href='/'>зареєструватися як догсітер</a>, внести всі необхідні дані та опублікувати ваше оголошення.`,
+                    content: (
+                      <div>
+                        Щоб стати догсітером на нашому сайті, потрібно лише{" "}
+                        <Link>
+                          <span className="underline text-main font-semibold">
+                            зареєструватися як догсітер
+                          </span>
+                        </Link>
+                        , внести всі необхідні дані та опублікувати ваше
+                        оголошення.
+                      </div>
+                    ),
                   },
                 ],
               }}
