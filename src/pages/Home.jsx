@@ -4,7 +4,6 @@ import Faq from "react-faq-component";
 import { Footer } from "../components/Footer/Footer";
 import { SearchForm } from "../components/Home/SearchForm/SearchForm";
 import { Link } from "react-router-dom";
-import ReactDOMServer from "react-dom/server";
 
 const Home = () => {
   return (
