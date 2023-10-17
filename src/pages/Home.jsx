@@ -22,7 +22,7 @@ const Home = () => {
           <h2 className="font-semibold text-lg lg:text-[32px] text-center mb-[20px] lg:mb-[46px]">
             Поширені запитання
           </h2>
-          <div className="lg:flex lg:gap-[83px] w-full lg:w-auto">
+          <div id="faq" className="lg:flex lg:gap-[83px] w-full lg:w-auto">
             <Faq
               data={{
                 rows: [
@@ -59,7 +59,7 @@ const Home = () => {
                     content: (
                       <div>
                         Щоб стати догсітером на нашому сайті, потрібно лише{" "}
-                        <Link>
+                        <Link to="/auth/register/type/dogSitter">
                           <span className="underline text-main font-semibold">
                             зареєструватися як догсітер
                           </span>

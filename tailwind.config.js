@@ -10,9 +10,11 @@ export default {
         "footer-texture": "url(/src/images/ion_paw-sharp@2x.png)",
         "checked-input": `url(/src/images/cheked.svg),
             linear-gradient(rgb(23, 187, 222), rgb(23, 187, 222))`,
+        "select-arrow": "url(/src/images/select_arrow.svg)",
       },
       backgroundPosition: {
         "lg-footer-position": "right 30px center, center;",
+        "select-position": "right 10px center",
       },
       backgroundSize: {
         "footer-size": "200px",

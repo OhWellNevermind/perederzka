@@ -1,7 +1,13 @@
+import { useParams } from "react-router-dom";
+
 export const RegistrationForm = () => {
+  const { userType } = useParams();
   return (
     <>
       <form className="flex flex-col px-[10px] md:px-[104px] gap-5 ">
+        <legend className="">
+          {userType === "user" ? "Акаунт користувача" : "Акаунт догсітера"}
+        </legend>
         <label className="flex flex-col gap-[5px] text-black font-semibold">
           Ім{`'`}я
           <input

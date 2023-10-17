@@ -3,7 +3,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 export const AuthPage = () => {
   return (
     <div className="flex flex-col justify-between items-center md:pt-[100px] pt-[10px] mb-[114px] px-[10px]">
-      <div className="w-full md:max-w-[630px] min-w-[304px] h-fit border-2 border-main rounded-lg flex flex-col pb-[40px]">
+      <div className="w-full md:max-w-[704px] lg:max-w-[630px] min-w-[304px] h-fit border-2 border-main rounded-lg flex flex-col pb-[40px]">
         <div className="flex mb-[20px] h-fit">
           <NavLink
             className={({ isActive }) => {

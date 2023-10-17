@@ -9,22 +9,29 @@ const BurgerMenu = ({ isOpen, closeBurger }) => {
       } `}
     >
       <div className="flex flex-col items-center h-full">
-        <div className="flex flex-col pt-[20px] px-[30px] gap-[30px]">
+        <div className="flex flex-col pt-[20px] gap-[30px]">
           <a
             className="font-semibold text-[16px] text-black text-center"
             href=""
           >
             Залишити тварину на перетримку
           </a>
-          <a
+          <Link
+            to="/auth/register/type/dogSitter"
             className="font-semibold text-[16px] text-black text-center"
             href=""
+            onClick={() => {
+              closeBurger();
+            }}
           >
             Стати догсітером
-          </a>
+          </Link>
           <a
             className="font-semibold text-[16px] text-black text-center"
-            href=""
+            href="#faq"
+            onClick={() => {
+              closeBurger();
+            }}
           >
             FAQs
           </a>

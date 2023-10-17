@@ -28,7 +28,7 @@ export const LoginForm = () => {
         Запам{`'`}ятати мене
       </label>
       <button
-        className="p-[10px] w-fit bg-main hover:bg-hover active:bg-white active:text-hover text-white self-center rounded-lg text-lg font-semibold mb-[10px]"
+        className="p-[10px] w-fit bg-main hover:bg-hover text-white self-center rounded-lg text-lg font-semibold mb-[10px]"
         type="submit"
       >
         Увійти

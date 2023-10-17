@@ -23,7 +23,9 @@ export const SearchForm = () => {
             Де будемо шукати?
           </h3>
           <select
-            className="w-full md:w-[280px] rounded-lg border-2 border-[#D9D9D9] bg-white cursor-pointer"
+            className="w-full md:w-[280px] lg:w-[440px] md:indent-[8px]
+               rounded-lg border-2 border-[#D9D9D9] bg-opacity-0 cursor-pointer 
+               appearance-none bg-select-arrow bg-no-repeat bg-select-position "
             defaultValue=""
           >
             <option disabled value="">
