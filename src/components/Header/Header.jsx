@@ -49,7 +49,7 @@ const Header = () => {
               </Link>
               <Link
                 to="auth/register/type"
-                className="p-[10px] bg-main rounded-lg font-semibold text-lg text-white hover:bg-hover focus:bg-white focus:text-hover"
+                className="p-[10px] bg-main rounded-lg font-semibold text-lg text-white hover:bg-hover active:bg-white active:text-hover"
               >
                 Зареєструватися
               </Link>

@@ -7,11 +7,18 @@ export default {
         lg: "5px",
       },
       backgroundImage: {
-        "footer-texture": "url(/src/images/Rectangle 18@2x.png)",
-        "lg-footer-texture": `url(/src/images/Rectangle 18@2x.png),
-            linear-gradient(rgb(23, 187, 222), rgb(23, 187, 222))`,
+        "footer-texture": "url(/src/images/ion_paw-sharp@2x.png)",
         "checked-input": `url(/src/images/cheked.svg),
             linear-gradient(rgb(23, 187, 222), rgb(23, 187, 222))`,
+      },
+      backgroundPosition: {
+        "lg-footer-position": "right 30px center, center;",
+      },
+      backgroundSize: {
+        "footer-size": "200px",
+      },
+      backgroundColor: {
+        "footer-img-color": "",
       },
     },
     screens: {

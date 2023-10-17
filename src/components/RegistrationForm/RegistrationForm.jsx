@@ -40,7 +40,7 @@ export const RegistrationForm = () => {
             name=""
             className="appearance-none w-[20px] h-[20px] border-2 border-gray rounded-lg checked:bg-checked-input bg-contain"
           />
-          <p className="max-w-[250px] lg:max-w-none w-[392px]">
+          <p className="max-w-[250px] md:max-w-none w-[392px]">
             <span className="leading-none">
               Я ознайомленний(-на) з{" "}
               <span className="underline text-main">Умовами</span> та
@@ -51,10 +51,10 @@ export const RegistrationForm = () => {
           </p>
         </label>
         <button
-          className="p-[10px] w-fit bg-main hover:bg-hover text-white self-center rounded-lg text-lg font-semibold mb-[20px]"
+          className="p-[10px] w-fit bg-main hover:bg-hover active:bg-white active:text-hover text-white self-center rounded-lg text-lg font-semibold mb-[20px]"
           type="submit"
         >
-          Заруєструватися
+          Зареєструватися
         </button>
       </form>
     </>
