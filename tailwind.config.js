@@ -7,7 +7,9 @@ export default {
         lg: "5px",
       },
       backgroundImage: {
-        "footer-texture": "url('/src/images/Rectangle 18@2x.png')",
+        "footer-texture": "url(/src/images/Rectangle 18@2x.png)",
+        "lg-footer-texture": `url(/src/images/Rectangle 18@2x.png),
+            linear-gradient(rgb(23, 187, 222), rgb(23, 187, 222))`,
         "checked-input": `url(/src/images/cheked.svg),
             linear-gradient(rgb(23, 187, 222), rgb(23, 187, 222))`,
       },

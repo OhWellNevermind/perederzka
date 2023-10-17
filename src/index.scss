@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: Montserrat, sans-serif;
+}
+
 .search-form {
   input[type="checkbox"] {
     /* Add if not using autoprefixer */

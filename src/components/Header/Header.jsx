@@ -7,6 +7,11 @@ import { useState } from "react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeBurger = () => {
+    setIsOpen(false);
+    window.document.documentElement.style.overflowY = "auto";
+  };
+
   return (
     <>
       <header className="flex justify-center bg-[#FBFBFB] border-b-2 border-b-[#D9D9D9] p-[10px] lg:mr-auto lg:ml-auto">
@@ -21,7 +26,7 @@ const Header = () => {
             <div className="flex gap-[30px] mr-[134px]">
               <a
                 className="font-semibold text-[18px] text-black text-center hover:text-main transition-all ease-linear"
-                href=""
+                href="#leftPet"
               >
                 Залишити тварину на перетримку
               </a>
@@ -54,8 +59,7 @@ const Header = () => {
             {isOpen ? (
               <button
                 onClick={() => {
-                  setIsOpen(false);
-                  window.document.documentElement.style.overflowY = "auto";
+                  closeBurger();
                 }}
               >
                 <IoCloseSharp size={24} fill="#17BBDE" stroke="#17BBDE" />
@@ -74,7 +78,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <BurgerMenu isOpen={isOpen} />
+      <BurgerMenu isOpen={isOpen} closeBurger={closeBurger} />
     </>
   );
 };

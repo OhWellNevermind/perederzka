@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 import Home from "./pages/Home";
-import { LoginPage } from "./pages/LoginPage";
 import { AuthPage } from "./pages/AuthPage";
 import { RegistrationForm } from "./components/RegistrationForm/RegistrationForm";
 import { SelectUserType } from "./components/SelectUserType/SelectUserType";
+import { LoginForm } from "./components/LoginForm/LoginForm";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
               path="register/type/:userType"
               element={<RegistrationForm />}
             />
-            <Route path="login" element={<LoginPage />} />
+            <Route path="login" element={<LoginForm />} />
           </Route>
         </Route>
       </Routes>

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const BurgerMenu = ({ isOpen }) => {
+const BurgerMenu = ({ isOpen, closeBurger }) => {
   return (
     <div
       className={`z-50 fixed transition-all pb-[100px] ease-in-out duration-300 w-full h-full bg-white top-[56px] left-0 ${
@@ -28,11 +29,25 @@ const BurgerMenu = ({ isOpen }) => {
             FAQs
           </a>
         </div>
-        <div className="mt-auto flex gap-[30px]">
-          <button className="font-semibold text-lg text-main">Увійти</button>
-          <button className="p-[10px] bg-main rounded-lg font-semibold text-lg text-white hover:bg-hover focus:bg-white focus:text-hover">
+        <div className="mt-auto flex items-center gap-[30px]">
+          <Link
+            onClick={() => {
+              closeBurger();
+            }}
+            to="auth/login"
+            className="font-semibold text-lg text-main"
+          >
+            Увійти
+          </Link>
+          <Link
+            onClick={() => {
+              closeBurger();
+            }}
+            to="auth/register/type"
+            className="p-[10px] bg-main rounded-lg font-semibold text-lg text-white hover:bg-hover focus:bg-white focus:text-hover"
+          >
             Зареєструватися
-          </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -41,6 +56,7 @@ const BurgerMenu = ({ isOpen }) => {
 
 BurgerMenu.propTypes = {
   isOpen: PropTypes.bool,
+  closeBurger: PropTypes.func,
 };
 
 export default BurgerMenu;

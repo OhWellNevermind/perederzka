@@ -1,19 +1,19 @@
 export const RegistrationForm = () => {
   return (
     <>
-      <form className="flex flex-col px-[104px] gap-5 ">
+      <form className="flex flex-col px-[10px] md:px-[104px] gap-5 ">
         <label className="flex flex-col gap-[5px] text-black font-semibold">
           Ім{`'`}я
           <input
-            className="border-2 border-gray rounded-lg py-[5px] pl-[10px] w-[422px]"
+            className="placeholder:text-sm placeholder:font-normal border-2 border-gray rounded-lg py-[5px] pl-[10px]  w-full min-w-[280px] max-w-[422px]"
             placeholder="Введіть ім'я для вашого акаунту"
-            type="email"
+            type="text"
           />
         </label>
         <label className="flex flex-col gap-[5px] text-black font-semibold">
           Електронна пошта
           <input
-            className="border-2 border-gray rounded-lg py-[5px] pl-[10px] w-[422px]"
+            className="placeholder:text-sm placeholder:font-normal border-2 border-gray rounded-lg py-[5px] pl-[10px]  w-full min-w-[280px] max-w-[422px]"
             placeholder="Введіть електронну пошту"
             type="email"
           />
@@ -22,7 +22,7 @@ export const RegistrationForm = () => {
           Пароль
           <input
             placeholder="Введіть пароль"
-            className="border-2 border-gray rounded-lg py-[5px] pl-[10px] w-[422px]"
+            className="placeholder:text-sm placeholder:font-normal border-2 border-gray rounded-lg py-[5px] pl-[10px]  w-full min-w-[280px] max-w-[422px]"
             type="password"
           />
         </label>
@@ -30,7 +30,7 @@ export const RegistrationForm = () => {
           Підтвердити пароль
           <input
             placeholder="Введіть пароль знову"
-            className="border-2 border-gray rounded-lg py-[5px] pl-[10px] w-[422px]"
+            className="placeholder:text-sm placeholder:font-normal border-2 border-gray rounded-lg py-[5px] pl-[10px]  w-full min-w-[280px] max-w-[422px]"
             type="password"
           />
         </label>
@@ -40,7 +40,7 @@ export const RegistrationForm = () => {
             name=""
             className="appearance-none w-[20px] h-[20px] border-2 border-gray rounded-lg checked:bg-checked-input bg-contain"
           />
-          <p className="w-[392px]">
+          <p className="max-w-[250px] lg:max-w-none w-[392px]">
             <span className="leading-none">
               Я ознайомленний(-на) з{" "}
               <span className="underline text-main">Умовами</span> та
@@ -51,7 +51,7 @@ export const RegistrationForm = () => {
           </p>
         </label>
         <button
-          className="p-[10px] w-fit bg-main text-white self-center rounded-lg text-lg font-semibold mb-[20px]"
+          className="p-[10px] w-fit bg-main hover:bg-hover text-white self-center rounded-lg text-lg font-semibold mb-[20px]"
           type="submit"
         >
           Заруєструватися
