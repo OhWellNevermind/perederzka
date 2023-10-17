@@ -38,13 +38,16 @@ const Header = () => {
                 FAQs
               </a>
             </div>
-            <div className="mt-auto flex gap-[30px]">
-              <button className="font-semibold text-lg text-main">
+            <div className="mt-auto flex gap-[30px] items-center">
+              <Link to="auth/login" className="font-semibold text-lg text-main">
                 Увійти
-              </button>
-              <button className="p-[10px] bg-main rounded-[5px] font-semibold text-lg text-white hover:bg-hover focus:bg-white focus:text-hover">
+              </Link>
+              <Link
+                to="auth/register/type"
+                className="p-[10px] bg-main rounded-lg font-semibold text-lg text-white hover:bg-hover focus:bg-white focus:text-hover"
+              >
                 Зареєструватися
-              </button>
+              </Link>
             </div>
           </div>
           <div className="lg:hidden">

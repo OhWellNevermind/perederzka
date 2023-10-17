@@ -4,7 +4,7 @@ import { CatIcon } from "../../icons/CatIcon";
 export const SearchForm = () => {
   return (
     <form
-      className="flex flex-col items-center pt-[20px] pb-[30px] rounded-[5px] 
+      className="search-form flex flex-col items-center pt-[20px] pb-[30px] rounded-lg 
                  border-4 border-[#EBEBEB] bg-[#F9F9F9] w-full max-w-[300px] md:max-w-[704px] lg:max-w-[1280px] md:justify-center"
       id="leftPet"
     >
@@ -23,7 +23,7 @@ export const SearchForm = () => {
             Де будемо шукати?
           </h3>
           <select
-            className="w-full md:w-[280px] rounded-[5px] border-2 border-[#D9D9D9] bg-white cursor-pointer"
+            className="w-full md:w-[280px] rounded-lg border-2 border-[#D9D9D9] bg-white cursor-pointer"
             defaultValue=""
           >
             <option disabled value="">
@@ -65,7 +65,7 @@ export const SearchForm = () => {
           e.preventDefault();
         }}
         type="submit"
-        className="w-fit bg-main rounded-[5px] p-[10px] text-white text-lg font-semibold hover:bg-hover focus:bg-white focus:text-hover"
+        className="w-fit bg-main rounded-lg p-[10px] text-white text-lg font-semibold hover:bg-hover focus:bg-white focus:text-hover"
       >
         <span className="lg:hidden">Знайти варіанти</span>
         <span className="hidden lg:block">

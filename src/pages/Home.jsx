@@ -1,7 +1,7 @@
 import Container from "../components/Container/Container";
 import { IoIosArrowDown } from "react-icons/io";
 import Faq from "react-faq-component";
-import { Footer } from "../components/Footer/Footer";
+
 import { SearchForm } from "../components/Home/SearchForm/SearchForm";
 import { Link } from "react-router-dom";
 
@@ -85,7 +85,6 @@ const Home = () => {
           </div>
         </section>
       </Container>
-      <Footer />
     </>
   );
 };

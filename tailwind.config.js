@@ -3,8 +3,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      borderRadius: {
+        lg: "5px",
+      },
       backgroundImage: {
         "footer-texture": "url('/src/images/Rectangle 18@2x.png')",
+        "checked-input": `url(/src/images/cheked.svg),
+            linear-gradient(rgb(23, 187, 222), rgb(23, 187, 222))`,
       },
     },
     screens: {
@@ -22,10 +27,15 @@ export default {
     },
     colors: {
       main: "#17BBDE",
+      mainLight: "#D7F0F5",
       hover: "#55D6F1",
       white: "#fff",
-      black: "000",
+      black: "#000",
+      gray: "#D9D9D9",
+      darkGray: "#D3D3D3",
+      lightBlack: "#828282",
     },
   },
+
   plugins: [],
 };
