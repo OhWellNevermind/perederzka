@@ -7,7 +7,6 @@ export const AuthPage = () => {
         <div className="flex mb-[20px] h-fit">
           <NavLink
             className={({ isActive }) => {
-              console.log(isActive);
               return `w-full inline-flex text-center items-center min-w-[150px] md:h-[100px] h-[50px] border-r-2 md:text-2xl font-semibold ${
                 isActive ? "bg-white" : "border-b-2 bg-darkGray"
               } border-main`;
