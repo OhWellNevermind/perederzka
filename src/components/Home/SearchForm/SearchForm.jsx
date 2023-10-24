@@ -1,7 +1,19 @@
 import { DogIcon } from "../../icons/DogIcon";
 import { CatIcon } from "../../icons/CatIcon";
+import { useSearchParams } from "react-router-dom";
 
 export const SearchForm = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const onSearchChange = (name, value) => {
+    if (value) {
+      searchParams.append(name, value);
+    } else {
+      searchParams.delete(name);
+    }
+    setSearchParams(searchParams);
+  };
+
   return (
     <form
       className="search-form flex flex-col items-center pt-[20px] pb-[30px] rounded-lg 
@@ -44,20 +56,56 @@ export const SearchForm = () => {
                 Собаку
               </span>
 
-              <input type="checkbox" name="dog" value="dog" />
+              <input
+                onChange={(e) => {
+                  if (e.currentTarget.checked) {
+                    onSearchChange(e.currentTarget.name, true);
+                  } else {
+                    onSearchChange(e.currentTarget.name);
+                  }
+                }}
+                checked={!!searchParams.get("dog")}
+                type="checkbox"
+                name="dog"
+                value="dog"
+              />
             </label>
             <label className=" relative flex lg:flex-row-reverse gap-[10px] items-center justify-center">
               <span className="absolute lg:static flex flex-col lg:flex-row-reverse lg:gap-[5px] justify-center items-center">
                 <CatIcon />
                 Кота
               </span>
-              <input type="checkbox" name="cat" value="cat" />
+              <input
+                onChange={(e) => {
+                  if (e.currentTarget.checked) {
+                    onSearchChange(e.currentTarget.name, true);
+                  } else {
+                    onSearchChange(e.currentTarget.name);
+                  }
+                }}
+                type="checkbox"
+                checked={!!searchParams.get("cat")}
+                name="cat"
+                value="cat"
+              />
             </label>
             <label className="relative flex lg:flex-row-reverse lg:gap-[10px] items-center justify-center">
               <span className="absolute lg:static flex flex-col justify-center items-center">
                 Інше
               </span>
-              <input type="checkbox" name="other" value="other" />
+              <input
+                onChange={(e) => {
+                  if (e.currentTarget.checked) {
+                    onSearchChange(e.currentTarget.name, true);
+                  } else {
+                    onSearchChange(e.currentTarget.name);
+                  }
+                }}
+                type="checkbox"
+                checked={!!searchParams.get("other")}
+                name="other"
+                value="other"
+              />
             </label>
           </div>
         </div>
@@ -67,7 +115,7 @@ export const SearchForm = () => {
           e.preventDefault();
         }}
         type="submit"
-        className="w-fit bg-main rounded-lg p-[10px] text-white text-lg font-semibold hover:bg-hover focus:bg-white focus:text-hover"
+        className="w-fit bg-main rounded-lg p-[10px] text-white text-lg font-semibold hover:bg-hover active:bg-white active:text-hover"
       >
         <span className="lg:hidden">Знайти варіанти</span>
         <span className="hidden lg:block">
