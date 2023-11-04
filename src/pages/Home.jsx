@@ -2,7 +2,7 @@ import Container from "../components/Container/Container";
 import { IoIosArrowDown } from "react-icons/io";
 import Faq from "react-faq-component";
 
-import { SearchForm } from "../components/Home/SearchForm/SearchForm";
+import { SearchForm } from "../components/SearchForm/SearchForm";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -16,13 +16,13 @@ const Home = () => {
         </h1>
         <SearchForm />
         <section
-          id="faqs"
+          id="faq"
           className="pt-[40px] lg:pt-[80px] pb-[50px] w-full max-w-[800px] lg:max-w-none flex flex-col items-center"
         >
           <h2 className="font-semibold text-lg lg:text-[32px] text-center mb-[20px] lg:mb-[46px]">
             Поширені запитання
           </h2>
-          <div id="faq" className="lg:flex lg:gap-[83px] w-full lg:w-auto">
+          <div className="lg:flex lg:gap-[83px] w-full lg:w-auto">
             <Faq
               data={{
                 rows: [

@@ -1,5 +1,5 @@
-import { DogIcon } from "../../icons/DogIcon";
-import { CatIcon } from "../../icons/CatIcon";
+import { DogIcon } from "../icons/DogIcon";
+import { CatIcon } from "../icons/CatIcon";
 import { useSearchParams } from "react-router-dom";
 
 export const SearchForm = () => {

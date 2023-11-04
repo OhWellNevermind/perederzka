@@ -3,6 +3,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,12 +25,13 @@ const Header = () => {
           </Link>
           <div className="hidden lg:flex">
             <div className="gap-[30px] flex">
-              <a
+              <HashLink
+                smooth
                 className="font-semibold text-[18px] text-black text-center hover:text-main transition-all ease-linear"
-                href="#leftPet"
+                to="/#leftPet"
               >
                 Залишити тварину на перетримку
-              </a>
+              </HashLink>
               <Link
                 to="/auth/register/type/dogSitter"
                 className="font-semibold text-[18px] text-black text-center hover:text-main transition-all ease-linear"
@@ -37,12 +39,13 @@ const Header = () => {
               >
                 Стати догсітером
               </Link>
-              <a
+              <HashLink
                 className="font-semibold text-[18px] text-black text-center hover:text-main transition-all ease-linear"
-                href=""
+                smooth
+                to="/#faq"
               >
                 FAQs
-              </a>
+              </HashLink>
             </div>
           </div>
           <div className="mt-auto gap-[30px] items-center hidden lg:flex">
