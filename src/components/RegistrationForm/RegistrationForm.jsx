@@ -106,7 +106,7 @@ export const RegistrationForm = () => {
           <input
             type="checkbox"
             name=""
-            className="appearance-none w-[20px] h-[20px] border-2 border-gray rounded-lg checked:bg-checked-input bg-contain"
+            className="cursor-pointer appearance-none w-[20px] h-[20px] border-2 border-gray rounded-lg checked:bg-checked-input bg-contain"
           />
           <p className="max-w-[250px] md:max-w-none w-[392px]">
             <span className="leading-none">
